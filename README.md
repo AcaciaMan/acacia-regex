@@ -59,7 +59,7 @@ Searches in file `sFile` occurences of regular expressions `dRegEx`
 
 ## Folder Terraform
 
-More complex regular expression searches in Oracle Cloud exported `core.tf` file
+More complex regular expression searches in Oracle Cloud (OCI) exported `core.tf` file
 
 ### File Terraform/App.py
 
