@@ -56,3 +56,15 @@ Class inherited from RegEx class
 ## File Engine/Engine.py
 
 Searches in file `sFile` occurences of regular expressions `dRegEx`
+
+## Folder Terraform
+
+More complex regular expression searches in Oracle Cloud exported `core.tf` file
+
+### File Terraform/App.py
+
+Contains found Terraform resources `dItems`
+
+### File Terraform/Items.py
+
+Class for Terraform resource item with found `id`, `type`, `dRefItemIds`
