@@ -27,4 +27,10 @@ class RegExQueue(RegEx):
             item: Item = app.dItems.get(queue)
             if item:
                 item.sBix = engine.getProjectName()
+            else:
+                item = Item()
+
+                item.id = queue
+                item.sBix = engine.getProjectName()
+                app.dItems[item.id] = item
 

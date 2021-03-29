@@ -9,6 +9,6 @@ class App:
         print('OSB items:')
         for i in self.dItems:
             item: Item = self.dItems[i]
-            print(i + ';' + item.sFile + ';' + str(item.sBix))
+            print(i + ';' + str(item.sFile) + ';' + str(item.sBix))
 
 
