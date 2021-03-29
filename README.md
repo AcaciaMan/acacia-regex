@@ -68,3 +68,7 @@ Contains found Terraform resources `dItems`
 ### File Terraform/Items.py
 
 Class for Terraform resource item with found `id`, `type`, `dRefItemIds`
+
+## Folder OSB
+
+Searches Oracle Service Bus (OSB) jms queues, their reading proxies and writing business services 
