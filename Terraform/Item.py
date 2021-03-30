@@ -3,4 +3,6 @@ class Item:
     type = None
     dRefItemIds = {}
     dRefToItemIds = {}
+    cidr = None
+    vcn = None
 

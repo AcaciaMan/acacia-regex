@@ -5,7 +5,7 @@ import re
 
 class RegExRefId(RegEx):
     def __init__(self):
-        regEx=br'= (.+?)\.(.+?)\.id'
+        regEx=br'([^ =\'"]+?)\.([^ =]+?)\.([^ =]+?)[\s,\'".]'
         recomp = re.compile(regEx)
         super().__init__(regEx, recomp)
 
@@ -14,12 +14,18 @@ class RegExRefId(RegEx):
 
         item = engine.dRegExPrev['Resource']
 
-        print('PrevItem ' + item.type + '.' + item.id)
-
         id_ = self.x.group(2).decode("utf-8")
         type_ = self.x.group(1).decode("utf-8")
+        last_ = self.x.group(3).decode("utf-8")
 
-        item.dRefItemIds[type_+'.'+id_] = None
+        print('PrevItem ' + item.type + '.' + item.id)
+
+        if last_ == 'id':
+            itemid = type_+'.'+id_
+        else:
+            itemid = type_+'.'+id_ + '.' + last_
+
+        item.dRefItemIds[itemid] = None
 
 
 
